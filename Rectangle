@@ -1,0 +1,51 @@
+package net.ukr.kekos222;
+
+public class Rectangle {
+	
+	private String name;
+	private int height;
+	private int width;
+
+	public Rectangle(String name, int height, int width) {
+		
+		this.name = name;
+		this.height = height;
+		this.width = width;
+	}
+
+	public String getName(){
+		
+		return name;
+	}
+	
+	public int calculateArea() {
+
+		int area = height * width;
+
+		return area;
+	}
+
+	public int calculatePerimeter() {
+
+		int perimeter = height * 2 + width * 2;
+
+		return perimeter;
+	}
+
+	public void showRectangleInConsole(Rectangle rec) {
+		
+		System.out.println(name + ":");
+		
+		System.out.println("Height = " + height);
+		
+		System.out.println("Width = " + width);
+
+		System.out.println("Area = " + rec.calculateArea());
+
+		System.out.println("Perimeter = " + rec.calculatePerimeter());
+		
+		System.out.println();
+	}
+
+	
+}
