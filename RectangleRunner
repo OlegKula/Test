@@ -1,0 +1,27 @@
+package net.ukr.kekos222;
+
+public class RectangleRunner {
+
+	public static void main(String[] args) {
+
+		Rectangle rec1 = new Rectangle("R-1", 10, 3);
+
+		Rectangle rec2 = new Rectangle("R-2", 20, 5);
+		
+		rec1.showRectangleInConsole(rec1);
+		
+		rec2.showRectangleInConsole(rec2);
+		
+		Rectangles recs = new Rectangles();
+		
+		recs.addRectangleToList(rec1);
+		
+		recs.addRectangleToList(rec2);
+		
+		recs.listInfo();
+		
+		System.out.println("The sum of areas is : " + recs.calculateSum());
+
+	}
+
+}
