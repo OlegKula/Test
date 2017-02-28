@@ -1,0 +1,40 @@
+package net.ukr.kekos222;
+
+import java.util.ArrayList;
+
+public class Rectangles {
+
+	private ArrayList<Rectangle> reclist = new ArrayList<>();
+		
+		public void addRectangleToList(Rectangle rec){
+			
+			reclist.add(rec);
+		}
+
+		public void listInfo(){
+			
+			int n = 0;
+			
+			System.out.println("Rectangles in the list : ");
+			
+			for (Rectangle rec : reclist){
+				
+				n += 1;
+				
+				System.out.println("Rectangle #" + n + ": " + rec.getName());
+			}
+		}
+		
+		public int calculateSum(){
+			
+			int sum = 0;
+			
+			for (Rectangle rec : reclist){
+				
+				sum += rec.calculateArea();
+			}
+			
+			return sum;
+		}
+		
+}
